@@ -1,0 +1,39 @@
+<h1>New page</h1>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.tinymce :content %>
+  </p>
+  <p>
+    <%= f.label :area_one %><br />
+    <%= f.tinymce :area_one %>
+  </p>
+  <p>
+    <%= f.label :area_two %><br />
+    <%= f.tinymce :area_two %>
+  </p>
+  <p>
+    <%= f.label :area_three %><br />
+    <%= f.tinymce :area_three %>
+  </p>
+  <p>
+    <%= f.label :area_four %><br />
+    <%= f.tinymce :area_four %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pages_path %>

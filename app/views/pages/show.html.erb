@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @page.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @page.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @page.content %>
+</p>
+
+<p>
+  <b>Area one:</b>
+  <%=h @page.area_one %>
+</p>
+
+<p>
+  <b>Area two:</b>
+  <%=h @page.area_two %>
+</p>
+
+<p>
+  <b>Area three:</b>
+  <%=h @page.area_three %>
+</p>
+
+<p>
+  <b>Area four:</b>
+  <%=h @page.area_four %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

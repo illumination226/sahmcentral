@@ -1,0 +1,52 @@
+<body topmargin="0" bottommargin="0" id="HomePage">
+<center>
+<img style="margin-left:8px;" src="http://idevelopment.homeip.net:3000/images/headerweb.png"/>
+<div class="center">
+<div class="GlobCtrCC">
+<div class="innerBody">
+<div class="Header">
+</div>
+<div class="Navigation">
+    <ul><li><%= link_to 'Home', root_url %></li><li><%= link_to 'Blog', posts_path %></li><li><%= link_to 'Announcements', announcements_path %></li><li><a class="lastrow" href="/about">About Us</a></li></ul>
+</div>
+<div class="InnerContent">
+<div class="LeftContent">
+<div class="PadLeft">
+<h1>SAHM Central Blog Posts</h1>
+
+<% all_posts = Post.all(:order => "created_at DESC")%>
+<% all_posts.each do |post| %>
+<div class="PadTop">
+	<div class="FloatRight">
+		<h5><%=h post.created_at.strftime("%B %d, %Y") %></h5>
+	</div>
+    <h3><%= link_to post.title, post %></h3>
+    <div style="padding-top:5px;" ><%= render :text => post.content.slice(0,200).concat("...").gsub!(/(<[^>]*>)|\n|\t/s) {" "} %></div>
+
+</div>
+<% end %>
+</table>
+</div>
+ </div>
+<div class="RightContent">
+ <h3>Blog Postings</h3>
+<% recent_posts = Post.all(:limit => 10, :order => "created_at DESC")%>
+<% recent_posts.each do |ind_post| %>
+    <div><%= link_to ind_post.title, ind_post %></div>
+<% end %>
+	<h3><%= link_to 'All Blog Posts', posts_path %></h3>
+<h3>Announcements</h3>
+<% recent_announcements = Announcement.all(:limit => 10, :order => "created_at DESC")%>
+<% recent_announcements.each do |ind_announcement| %>
+    <div><%= link_to ind_announcement.title, ind_announcement %></div>
+<% end %>
+	<h3><%= link_to 'All Announcements', announcements_path %></h3>	
+</div>
+</div>
+<div class="footer">
+</div>
+</div>
+</div>
+</div>
+</center>
+</body>

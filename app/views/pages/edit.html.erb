@@ -1,0 +1,40 @@
+<h1>Editing page</h1>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :area_one %><br />
+    <%= f.text_area :area_one %>
+  </p>
+  <p>
+    <%= f.label :area_two %><br />
+    <%= f.text_area :area_two %>
+  </p>
+  <p>
+    <%= f.label :area_three %><br />
+    <%= f.text_area :area_three %>
+  </p>
+  <p>
+    <%= f.label :area_four %><br />
+    <%= f.text_area :area_four %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @page %> |
+<%= link_to 'Back', pages_path %>

@@ -1,0 +1,22 @@
+<h1>New post</h1>
+
+<% form_for(@post) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+     <%= f.hidden_field :name, :value => [session[:first_name], session[:last_name]].join(" ")%>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.tinymce  :content %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', posts_path %>

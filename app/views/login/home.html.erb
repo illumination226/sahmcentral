@@ -1,0 +1,97 @@
+<% if flash[:notice] %>
+	<div style="font-family:'Trebuchet MS'; color:#FF0000; font-size:14px;">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<br />
+<%= link_to "Logout",:controller => "login", :action => "logout" %>
+<br />
+<%= link_to 'Create a new Post', :controller => 'posts', :action => 'new' %>
+<table>
+  <tr>
+    <th>Title</th>
+	<th></th>
+    <th>User Name</th>
+  </tr>
+<% allPosts = Post.all(:order => "created_at DESC") %>
+<% allPosts.each do |post| %>
+  <tr>
+    <td><%=h post.title %></td>
+    <td>   </td>
+    <td><%=h post.name %></td>
+    <td><%= link_to 'Show', post_path(post) %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create a New announcement', new_announcement_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+      <th></th>
+    <th>Name</th>
+  </tr>
+<% allAnnouncements = Announcement.all(:order => "created_at DESC") %>
+<% allAnnouncements.each do |announcement| %>
+  <tr>
+    <td><%=h announcement.name %></td>
+    <td></td>
+    <td><%=h announcement.title %></td>
+    <td><%= link_to 'Show', announcement %></td>
+    <td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
+    <td><%= link_to 'Destroy', announcement, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create a New Page', new_page_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+  </tr>
+  
+<% allPages = Page.all(:order => "created_at DESC") %>
+<% allPages.each do |page| %>
+  <tr>
+    <td><%=h page.name %></td>
+    <td><%=h page.title %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+
+<%= link_to 'Create a new User', :controller => 'users', :action => 'new' %>
+<table>
+  <tr>
+    <th>User name</th>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+<% allUsers = User.all %>
+<% allUsers.each do |user| %>
+  <tr>
+    <td><%=h user.user_name %></td>
+    <td><%=h user.first_name %></td>
+    <td><%=h user.last_name %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
