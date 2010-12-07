@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  title: MyString
+  content: MyText
+  area_one: MyText
+  area_two: MyText
+  area_three: MyText
+  area_four: MyText
+
+two:
+  name: MyString
+  title: MyString
+  content: MyText
+  area_one: MyText
+  area_two: MyText
+  area_three: MyText
+  area_four: MyText

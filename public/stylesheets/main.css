@@ -1,0 +1,147 @@
+@charset "utf-8";
+body {
+background:#333333;
+color:#111111;
+font-family:"Trebuchet MS",Helvetica,sans-serif;
+}
+a {
+text-decoration:none;
+color:#000000;
+}
+.center {
+margin-left:auto;
+margin-right:auto;
+}
+.GlobCtrCC {
+width:781px;
+}
+.GlobCtrCC .innerBody {
+width:781px;
+text-align:left;
+border:8px solid black;
+background:#eeeeee;
+background:url("http://idevelopment.homeip.net:3000/images/main_background.png") repeat scroll left top transparent;
+border-top:2px solid black;
+border-left:none;
+}
+.Navigation {
+padding:0 0 0 8px;
+/*background:url(NavigationGradiant.png) repeat-x;*/
+}
+.Navigation ul {
+padding:0;
+margin:0;
+display:block;
+height:30px;
+width:773px;
+}
+.Navigation ul li {
+float:left;
+display:block;
+text-align:center;
+}
+.Navigation ul li a{
+color:#111;
+background:#777;
+font-size:20px;
+vertical-align:middle;
+border-right:1px solid #000;
+border-bottom:3px solid #000;
+display:block;
+line-height:30px;
+overflow:hidden;
+font-weight:normal;
+width:192px;
+}
+.Navigation ul li .lastrow {
+	width:194px;
+	border-right:none;
+	
+}
+.Navigation ul li a:hover {
+background:#ccc;
+}
+.InnerContent {
+min-height:700px;
+}
+.LeftContent {
+float:left;
+width:558px;
+}
+.PadLeft {
+padding-left:20px;
+padding-right:10px;
+}
+.PadTop {
+padding:10px 0;
+}
+.LeftContent .FloatRight {
+float:right;
+}
+.LeftContent .FloatRight h5 {
+margin:0;
+padding:0;
+} 
+.LeftContent div h3 {
+margin:0;
+padding:0;
+}
+.LeftContent .comment {
+border-bottom:2px dashed #CCCCCC;
+
+}
+.LeftContent .beginComment h2 {
+border-top:2px dashed #333333;
+padding-top:5px;
+}
+.LeftContent .commentContent {
+padding:0 0 0 10px;
+}
+.LeftContent .commentLabel {
+float:left;
+padding-right:10px;
+width:60px;
+}
+.RightContent {
+float:left;
+width:220px;
+min-height:700px;
+}
+.InnerContent .paintingOnly {
+padding:20px 0 20px 250px;
+}
+.InnerContent .GalleryImages a {
+padding: 10px 50px;
+display:block;
+float:left;
+}
+.InnerContent .RightContent {
+background:#aaaaaa;
+border-left: 3px solid black;
+}
+.InnerContent .RightContent h3 {
+padding:8px;
+margin:10px 0 0 5px;
+background:url("http://idevelopment.homeip.net:3000/images/railroad_header.png") no-repeat scroll left top transparent;
+}
+.InnerContent .RightContent div {
+display:block;
+font-size:18px;
+padding:14px 10px 0;
+}
+.InnerContent .RightContent div a {
+	color:#111111;
+}
+textarea {
+	width:500px;
+	height:150px;
+}
+.footer {
+color:#5B2424;
+font-size:12px;
+text-align:center;
+clear:both;
+}
+.footer .developer {
+font-size:10px;
+}
