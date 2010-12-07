@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :valid
+
   
   def valid
     if !session[:user_id]
