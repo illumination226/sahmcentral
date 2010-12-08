@@ -38723,3 +38723,14 @@ ActionController::RoutingError (No route matches "/proxyheader.php" with {:metho
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 68.230.125.127 at 2010-12-07 22:38:03) [GET]
+  Parameters: {"id"=>"still-here-1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (post_id = '1') ORDER BY created_at DESC[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 10[0m
+  [4;35;1mAnnouncement Load (0.0ms)[0m   [0mSELECT * FROM "announcements" ORDER BY created_at DESC LIMIT 10[0m
+Completed in 1984ms (View: 1547, DB: 0) | 200 OK [http://idevelopment.homeip.net/posts/still-here-1]
